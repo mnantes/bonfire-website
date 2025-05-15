@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bonfire - World 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop id="bg-video">
+    <source src="fundo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- HUD -->
+  <div class="hud">
+    <div class="hud-item hearts">❤️ ❤️ ❤️</div>
+    <div class="hud-item coins">🪙 x 12</div>
+  </div>
+
+  <!-- Fogueira no canto -->
+  <div class="bonfire-icon">🔥</div>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <header class="logo-area">
+      <img src="logo.jpg" alt="Bonfire Communication Logo" class="logo" />
+    </header>
+
+    <main class="content">
+      <h1>🌍 World 1: The Spark</h1>
+      <p>This is where your communication journey begins.</p>
+      <button class="start-button" onclick="goBack()">Back</button>
+    </main>
+  </div>
+
+  <script>
+    function goBack() {
+      const transition = document.createElement("div");
+      transition.classList.add("transition-screen");
+      document.body.appendChild(transition);
+      setTimeout(() => transition.classList.add("active"), 10);
+      setTimeout(() => (window.location.href = "index.html"), 1200);
+    }
+  </script>
+</body>
+</html>
